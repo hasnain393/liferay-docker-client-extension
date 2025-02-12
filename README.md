@@ -6,7 +6,8 @@ Example to run Liferay and Client Extensions in a Docker Compose stack.
   - [Node JS](#node-js)
 
 ## Integrating OAuth 2.0 with Liferay
-<img width="1001" alt="OAuth-communication-process-between-Liferay-and-Client-Extensions" src="https://github.com/user-attachments/assets/514c07f9-bf9e-4537-98d6-ae4756459251" />
+<img width="1001" alt="OAuth-communication-process-between-Liferay-and-Client-Extensions" src="https://github.com/user-attachments/assets/4af610bf-d2cd-412c-b433-dc86a1fc1699" />
+
 
 # Enhancing Liferay with OAuth 2.0
 
@@ -50,7 +51,11 @@ Microservice client extensions require pre-configured authentication profiles to
 - It requests an OAuth token from the Liferay server using the UserAgent profile which, as seen in your console log, includes scopes that allow it to perform actions related to the admin workflow.
 - This token is then **used to authenticate requests made from the React client to the Node.js microservice**, ensuring that these requests are securely authenticated.
 
-![React Front-End Client Extension OAuth Flow](https://github.com/user-attachments/assets/72731762-78c0-4375-b9ad-02673b3744d6)
+
+
+![Reat-Frontent-Client-Extension](https://github.com/user-attachments/assets/ad67088e-65b0-4ea8-8823-d89703981290)
+
+
 
 ## 2. Node.js Microservice
 **Function**: Acts as a backend processing agent that handles more complex or sensitive operations that shouldn't be processed directly by the front end.
@@ -60,14 +65,17 @@ Microservice client extensions require pre-configured authentication profiles to
 - This configuration is set up with scopes that allow it to perform user and system-wide operations that do not require a specific user context, suitable for backend services.
 - The token obtained allows the Node.js microservice to communicate securely with Liferay DXP, fetching or pushing data as needed by the React client but processed at the server level.
 
-![Node.js Microservice OAuth Flow](https://github.com/user-attachments/assets/367ea314-91d6-44dd-b157-100689473f08)
+![Liferay-oauth-token-react-node-frontend-to-microservice](https://github.com/user-attachments/assets/a4b73e9e-e08f-4a85-9214-0a3d37e64ea6)
 
 
 
 
 
 ## Extending Liferay with Client Extensions
-<img width="2746" alt="Extending-Liferay-Client-Extension-Loosely-Coupled" src="https://github.com/user-attachments/assets/c1749365-4a77-48d3-8cdb-515c67adc163" />
+
+<img width="2746" alt="Extending-Liferay-Client-Extension-Loosely-Coupled" src="https://github.com/user-attachments/assets/387be9f9-309b-4dd9-8ff7-0521b83d1017" />
+
+
 
 
 
