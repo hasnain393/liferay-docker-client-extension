@@ -5,6 +5,12 @@ Example to run Liferay and Client Extensions in a Docker Compose stack.
   - [Spring Boot](#spring-boot)
   - [Node JS](#node-js)
 
+# Advanced Development with Liferay and Docker: Mastering Client Extensions
+
+## Introduction
+
+Liferay DXP (Digital Experience Platform) is a leader in delivering customized experiences across web and mobile platforms. By integrating Docker into your Liferay development workflow, you can achieve more streamlined, reproducible, and scalable deployments. This comprehensive guide will walk you through the process of using Docker to develop and deploy Liferay Client Extensions, highlighting the integration of OAuth 2.0 for enhanced security.
+
 ## Integrating OAuth 2.0 with Liferay
 <img width="1001" alt="OAuth-communication-process-between-Liferay-and-Client-Extensions" src="https://github.com/user-attachments/assets/4af610bf-d2cd-412c-b433-dc86a1fc1699" />
 
