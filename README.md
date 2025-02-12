@@ -26,6 +26,7 @@ Microservice client extensions require pre-configured authentication profiles to
 
 
 # OAuth Profiles
+![image](https://github.com/user-attachments/assets/dc4f4043-bcb8-45cb-8638-99f47261cef8)
 
 ## OAuth User Agent Client Extensions
 - **Description**: You can use a client extension to configure a Liferay OAuth2 application pre-configured with a User Agent Application client profile. This type of authentication profile is required for API calls authorized by a specific user.
@@ -34,6 +35,8 @@ Microservice client extensions require pre-configured authentication profiles to
 - **Description**: You can use a client extension to configure a Liferay OAuth2 application pre-configured with a Headless Server client profile. This kind of authentication profile is required for API calls that are not authorized by a specific user.
 
 ## Types of Clients
+![image](https://github.com/user-attachments/assets/705e0e34-e021-4b67-82b2-19af56086a3f)
+
 - **oAuthApplicationUserAgent**
   - **Usage**: This type of OAuth client is typically used when the application acts on behalf of a user, with direct user interaction, likely through a web browser.
   
@@ -48,14 +51,13 @@ Microservice client extensions require pre-configured authentication profiles to
 
 **Process**:
 - It accesses the `Liferay.authToken` from Liferay DXP directly.
-- It requests an OAuth token from the Liferay server using the UserAgent profile which, as seen in your console log, includes scopes that allow it to perform actions related to the admin workflow.
+- It **requests an OAuth token from the Liferay server using the UserAgent profile** which, as seen in your console log, includes scopes that allow it to perform actions related to the admin workflow.
 - This token is then **used to authenticate requests made from the React client to the Node.js microservice**, ensuring that these requests are securely authenticated.
-
 
 
 ![Reat-Frontent-Client-Extension](https://github.com/user-attachments/assets/ad67088e-65b0-4ea8-8823-d89703981290)
 
-
+![Liferay-oauth-token-react-node-frontend-to-microservice](https://github.com/user-attachments/assets/a4b73e9e-e08f-4a85-9214-0a3d37e64ea6)
 
 ## 2. Node.js Microservice
 **Function**: Acts as a backend processing agent that handles more complex or sensitive operations that shouldn't be processed directly by the front end.
@@ -65,7 +67,7 @@ Microservice client extensions require pre-configured authentication profiles to
 - This configuration is set up with scopes that allow it to perform user and system-wide operations that do not require a specific user context, suitable for backend services.
 - The token obtained allows the Node.js microservice to communicate securely with Liferay DXP, fetching or pushing data as needed by the React client but processed at the server level.
 
-![Liferay-oauth-token-react-node-frontend-to-microservice](https://github.com/user-attachments/assets/a4b73e9e-e08f-4a85-9214-0a3d37e64ea6)
+
 
 
 
