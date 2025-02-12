@@ -1,0 +1,35 @@
+services:
+  liferay:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        - TARGET_ENV=local
+    environment:
+      JAVA_VERSION: zulu11
+      LIFERAY_VIRTUAL_PERIOD_HOSTS_PERIOD_VALID_PERIOD_HOSTS: liferay,localhost,127.0.0.1,[::1],[0:0:0:0:0:0:0:1]
+      # if you have an activation key under /configs/local/osgi/modules
+      LIFERAY_DISABLE_TRIAL_LICENSE: true
+    user : root    
+    ports:
+      - "8080:8080"
+    volumes:
+      - liferay_data:/opt/liferay/data
+  springboot:
+    build:
+      dockerfile: client-extensions/spring-boot/Dockerfile
+      context: .
+    depends_on:
+      liferay:
+        condition: service_healthy
+  nodejs:
+    build:
+      dockerfile: client-extensions/node-js/Dockerfile
+      context: .
+    depends_on:
+      liferay:
+        condition: service_healthy
+    ports:
+      - "3001:3001"     
+volumes:
+  liferay_data:
