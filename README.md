@@ -5,7 +5,7 @@ Example to run Liferay and Client Extensions in a Docker Compose stack.
   - [Spring Boot](#spring-boot)
   - [Node JS](#node-js)
 
-# Advanced Development with Liferay and Docker: Mastering Client Extensions
+# Revolutionizing Enterprise Web Development with Liferay: Mastering Client Extensions
 
 ## Introduction
 
