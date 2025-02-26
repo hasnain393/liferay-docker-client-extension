@@ -164,10 +164,10 @@ docker cp 'C:\Users\Hasnain Ahmed Shaikh\Downloads\activation-key-dxpdevelopment
 Replace <container_id> with your container's ID. Refresh your browser at http://localhost:8080/ to activate the license.
 
 ## Building the Project
-Build the project using the Gradle Wrapper:
+Build the project using the Gradle Wrapper from client-extension folder:
 
 ```bash
-./gradlew clean build
+.././gradlew clean build
 ```
 This command compiles all the modules in the project, preparing them for deployment.
 
@@ -177,13 +177,13 @@ Navigate to the client extensions directory and build the React application:
 
 ```bash
 cd client-extensions
-./gradlew clean build
+.././gradlew clean build
 ```
 
 For building a specific module, use:
 
 ```bash
-../gradlew clean build -p react-js
+.././gradlew clean build -p react-js
 ```
 
 Once built, package and copy the output to the Liferay deploy folder:
@@ -200,13 +200,13 @@ Navigate to the client extensions directory and build the Node application:
 
 ```bash
 cd client-extensions
-./gradlew clean build
+.././gradlew clean build
 ```
 
 For building a specific module, use:
 
 ```bash
-../gradlew clean build -p node-js
+.././gradlew clean build -p node-js
 ```
 
 ### Local Development (Running Server Independently) without Docker
@@ -214,6 +214,19 @@ For building a specific module, use:
 When running the Node.js application locally without Docker using yarn start:
 
 1. Change the main domain to `localhost:8080`.
+2. cd into (liferay-docker-client-extension-main\client-extensions\node-js) node-js folder and and run command `yarn start`.
+![image](https://github.com/user-attachments/assets/690bc208-b4ae-4440-8700-88f8fc22d92a)
+
+
+To run the React.js application locally :
+
+1.cd into react-js and run the command `npm run build`.
+
+![image](https://github.com/user-attachments/assets/fc1456d8-3aa8-4811-8eac-8d127702b488)
+
+![image](https://github.com/user-attachments/assets/1777d4fc-73dd-4e2e-8319-3e79a08321b1)
+
+![image](https://github.com/user-attachments/assets/d855d855-3911-4f86-a8c0-404129cf3687)
 
 ### Running with Docker
 
